@@ -1,19 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
+import Home from './pages/Home.jsx';
 
-import BookList from './pages/book/BookList';
-import AddBook from './pages/book/AddBook';
-import EditBook from './pages/book/EditBook';
+import BookList from './pages/book/BookList.jsx';
+import AddBook from './pages/book/AddBook.jsx';
+import EditBook from './pages/book/EditBook.jsx';
 
-import GenreList from './pages/genre/GenreList';
-import AddGenre from './pages/genre/AddGenre';
-import EditGenre from './pages/genre/EditGenre';
+import GenreList from './pages/genre/GenreList.jsx';
+import AddGenre from './pages/genre/AddGenre.jsx';
+import EditGenre from './pages/genre/EditGenre.jsx';
 
-import PublisherList from './pages/publisher/PublisherList';
-import AddPublisher from './pages/publisher/AddPublisher';
-import EditPublisher from './pages/publisher/EditPublisher';
+import PublisherList from './pages/publisher/PublisherList.jsx';
+import AddPublisher from './pages/publisher/AddPublisher.jsx';
+import EditPublisher from './pages/publisher/EditPublisher.jsx';
 
 const App = () => {
   return (
