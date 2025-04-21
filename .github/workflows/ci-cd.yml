@@ -37,7 +37,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Build React App
         working-directory: ./book-management-frontend
@@ -46,4 +46,4 @@ jobs:
           npm run build
 
       - name: Build Docker Containers
-        run: docker-compose build
+        run: docker-compose build --no-cache
