@@ -49,4 +49,4 @@ jobs:
           npm run build
 
       - name: Build Docker Containers
-        run: docker-compose build --no-cache
+        run: docker compose build --no-cache
