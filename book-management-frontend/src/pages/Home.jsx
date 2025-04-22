@@ -8,6 +8,10 @@ const Home = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <span className="navbar-brand">Book System</span>
+          <div className="d-flex ms-auto">
+            <Link to="/signin" className="btn btn-outline-primary me-2">Login</Link>
+            <Link to="/signup" className="btn btn-outline-success">Register</Link>
+          </div>
         </div>
       </nav>
 

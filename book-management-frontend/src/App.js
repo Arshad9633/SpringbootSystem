@@ -15,11 +15,18 @@ import PublisherList from './pages/publisher/PublisherList.jsx';
 import AddPublisher from './pages/publisher/AddPublisher.jsx';
 import EditPublisher from './pages/publisher/EditPublisher.jsx';
 
+import SignIn from './pages/auth/SignIn.jsx';
+import SignUp from './pages/auth/SignUp.jsx';
+
 const App = () => {
   return (
     <Routes>
       {/* Home Page */}
       <Route path="/" element={<Home />} />
+
+      {/* Authentication Pages */}
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
 
       {/* Book Pages */}
       <Route path="/books" element={<BookList />} />
