@@ -16,7 +16,7 @@ import AddPublisher from './pages/publisher/AddPublisher.jsx';
 import EditPublisher from './pages/publisher/EditPublisher.jsx';
 
 import SignIn from './pages/Auth/SignIn.jsx';
-import SignUp from './pages/auth/SignUp.jsx';
+import SignUp from './pages/Auth/SignUp.jsx';
 
 import AdminPanel from './pages/admin/AdminPanel.jsx';
 
