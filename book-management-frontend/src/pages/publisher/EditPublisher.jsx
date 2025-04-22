@@ -17,7 +17,7 @@ const EditPublisher = () => {
 
   const fetchPublisher = async () => {
     try {
-      const response = await axios.get(`http://spring-backend:8080/api/publishers/${id}`);
+      const response = await axios.get(`http://localhost:8080/api/publishers/${id}`);
       setPublisher(response.data);
     } catch (error) {
       console.error('Error fetching publisher:', error);
@@ -35,7 +35,7 @@ const EditPublisher = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://spring-backend:8080/api/publishers/${id}`, publisher);
+      await axios.put(`http://localhost:8080/api/publishers/${id}`, publisher);
       navigate('/publishers');
     } catch (error) {
       console.error('Error updating publisher:', error);

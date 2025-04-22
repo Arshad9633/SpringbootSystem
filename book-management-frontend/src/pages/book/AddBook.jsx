@@ -22,7 +22,7 @@ const AddBook = () => {
 
   const fetchGenres = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/genres');
+      const response = await axios.get('http://localhost:8080/api/genres');
       setGenres(response.data);
     } catch (error) {
       console.error('Error fetching genres:', error);
@@ -31,7 +31,7 @@ const AddBook = () => {
 
   const fetchPublishers = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/publishers');
+      const response = await axios.get('http://localhost:8080/api/publishers');
       setPublishers(response.data);
     } catch (error) {
       console.error('Error fetching publishers:', error);

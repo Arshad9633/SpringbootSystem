@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/books")
-@CrossOrigin(origins = "*") // Allow frontend access
+@CrossOrigin(origins = "http://localhost:3000") // Allow frontend access
 public class BookController {
 
     @Autowired

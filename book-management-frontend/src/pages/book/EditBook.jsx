@@ -24,7 +24,7 @@ const EditBook = () => {
 
   const fetchBook = async () => {
     try {
-      const response = await axios.get(`http://spring-backend:8080/api/books/${id}`);
+      const response = await axios.get(`http://localhost:8080/api/books/${id}`);
       const fetchedBook = response.data;
       setBook({
         title: fetchedBook.title,
@@ -39,7 +39,7 @@ const EditBook = () => {
 
   const fetchGenres = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/genres');
+      const response = await axios.get('http://localhost:8080/api/genres');
       setGenres(response.data);
     } catch (error) {
       console.error('Error fetching genres:', error);
@@ -48,7 +48,7 @@ const EditBook = () => {
 
   const fetchPublishers = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/publishers');
+      const response = await axios.get('http://localhost:8080/api/publishers');
       setPublishers(response.data);
     } catch (error) {
       console.error('Error fetching publishers:', error);
@@ -66,7 +66,7 @@ const EditBook = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://spring-backend:8080/api/books/${id}`, {
+      await axios.put(`http://localhost:8080/api/books/${id}`, {
         ...book,
         genre: { id: book.genre },
         publisher: { id: book.publisher }

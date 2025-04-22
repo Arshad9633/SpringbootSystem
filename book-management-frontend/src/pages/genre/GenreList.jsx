@@ -12,7 +12,7 @@ const GenreList = () => {
 
   const fetchGenres = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/genres');
+      const response = await axios.get('http://localhost:8080/api/genres');
       setGenres(response.data);
     } catch (error) {
       console.error('Error fetching genres:', error);
@@ -24,7 +24,7 @@ const GenreList = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://spring-backend:8080/api/genres/${id}`);
+      await axios.delete(`http://localhost:8080/api/genres/${id}`);
       fetchGenres(); // Refresh list
     } catch (error) {
       console.error('Error deleting genre:', error);

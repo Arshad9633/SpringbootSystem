@@ -12,7 +12,7 @@ const PublisherList = () => {
 
   const fetchPublishers = async () => {
     try {
-      const response = await axios.get('http://spring-backend:8080/api/publishers');
+      const response = await axios.get('http://localhost:8080/api/publishers');
       setPublishers(response.data);
     } catch (error) {
       console.error('Error fetching publishers:', error);
@@ -24,7 +24,7 @@ const PublisherList = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://spring-backend:8080/api/publishers/${id}`);
+      await axios.delete(`http://localhost:8080/api/publishers/${id}`);
       fetchPublishers(); // Refresh list
     } catch (error) {
       console.error('Error deleting publisher:', error);
