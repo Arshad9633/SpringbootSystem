@@ -50,7 +50,7 @@ const AddBook = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://spring-backend:8080/api/books', {
+      await axios.post('http://localhost:8080/api/books', {
         ...book,
         genre: { id: book.genre },
         publisher: { id: book.publisher }
