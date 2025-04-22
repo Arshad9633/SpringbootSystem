@@ -1,16 +1,42 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Home = () => {
+  const location = useLocation();
+
   return (
     <>
-      {/* Navbar */}
+      {/* Navbar with navigation links */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <span className="navbar-brand">Book System</span>
-          <div className="d-flex ms-auto">
-            <Link to="/signin" className="btn btn-outline-primary me-2">Login</Link>
-            <Link to="/signup" className="btn btn-outline-success">Register</Link>
+          <Link className="navbar-brand" to="/">Book System</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav me-auto">
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/books' ? 'active' : ''}`} to="/books">Books</Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/genres' ? 'active' : ''}`} to="/genres">Genres</Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/publishers' ? 'active' : ''}`} to="/publishers">Publishers</Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === '/admin' ? 'active' : ''}`} to="/admin">Admin</Link>
+              </li>
+            </ul>
+
+            <div className="d-flex">
+              <Link to="/signin" className="btn btn-outline-primary me-2">Login</Link>
+              <Link to="/signup" className="btn btn-outline-success">Register</Link>
+            </div>
           </div>
         </div>
       </nav>

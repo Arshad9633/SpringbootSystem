@@ -15,8 +15,10 @@ import PublisherList from './pages/publisher/PublisherList.jsx';
 import AddPublisher from './pages/publisher/AddPublisher.jsx';
 import EditPublisher from './pages/publisher/EditPublisher.jsx';
 
-import SignIn from './pages/auth/SignIn.jsx';
+import SignIn from './pages/Auth/SignIn.jsx';
 import SignUp from './pages/auth/SignUp.jsx';
+
+import AdminPanel from './pages/admin/AdminPanel.jsx';
 
 const App = () => {
   return (
@@ -42,6 +44,11 @@ const App = () => {
       <Route path="/publishers" element={<PublisherList />} />
       <Route path="/add-publisher" element={<AddPublisher />} />
       <Route path="/edit-publisher/:id" element={<EditPublisher />} />
+
+      {/* Admin Panel */}
+      <Route path="/admin" element={<AdminPanel />} />
+
+      
     </Routes>
   );
 };
