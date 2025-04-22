@@ -12,7 +12,7 @@ const AddGenre = () => {
     if (!genreName.trim()) return;
 
     try {
-      await axios.post('http://localhost:8080/api/genres', {
+      await axios.post('http://spring-backend:8080/api/genres', {
         name: genreName
       });
       navigate('/genres');

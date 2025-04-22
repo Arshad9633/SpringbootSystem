@@ -22,7 +22,7 @@ const AddPublisher = () => {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:8080/api/publishers', publisher);
+      await axios.post('http://spring-backend:8080/api/publishers', publisher);
       navigate('/publishers');
     } catch (error) {
       console.error('Error saving publisher:', error);

@@ -14,7 +14,7 @@ const EditGenre = () => {
 
   const fetchGenre = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/genres/${id}`);
+      const response = await axios.get(`http://spring-backend:8080/api/genres/${id}`);
       setGenreName(response.data.name);
     } catch (error) {
       console.error('Error fetching genre:', error);
@@ -25,7 +25,7 @@ const EditGenre = () => {
     e.preventDefault();
 
     try {
-      await axios.put(`http://localhost:8080/api/genres/${id}`, {
+      await axios.put(`http://spring-backend:8080/api/genres/${id}`, {
         id,
         name: genreName
       });

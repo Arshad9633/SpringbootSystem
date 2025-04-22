@@ -13,7 +13,7 @@ const BookList = () => {
 
   const loadBooks = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/books');
+      const response = await axios.get('http://spring-backend:8080/api/books');
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);
@@ -25,7 +25,7 @@ const BookList = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/books/${id}`);
+      await axios.delete(`http://spring-backend:8080/api/books/${id}`);
       loadBooks(); // Refresh list after deletion
     } catch (error) {
       console.error('Error deleting book:', error);
